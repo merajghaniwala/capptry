@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<!--[if IE]>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<![endif]-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script>
+		$(document).ready(function()
+		{
+			var next = true;
+			
+			$("head").load("head.html");
+			//$("body").load("logo.html");
+			
+			add("canvasmenu.html");			
+			//add("content.html");			
+						
+			add("header.html");
+			add("service.html");
+			add("slider.html");
+			//add("circle.html");
+			add("featured.html");
+			add("newpros.html");
+			add("fromblog.html");
+			add("brands.html");
+			add("social.html");
+			add("widgets.html");
+			add("subscribe.html");
+			add("footer.html");
+			add("scripts.html");
+			function addi(file)
+			{
+				$.get(file, function(data)
+				{
+					$("#outer-canvas").html($("#outer-canvas").html()+data);
+				});
+			}
+			
+			function add(file)
+			{
+				next = false;
+				$.get(file, function(data)
+				{
+					$("body").html($("body").html()+data);
+				});
+				next = true;
+			}
+			//$("#menuScrollerWrapper").hide();
+
+		});
+	</script>
+</head>
+<body class="responsive">
+	
+</body>
+</html>

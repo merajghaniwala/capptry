@@ -12,7 +12,7 @@ versionCode = "10" >
 	<gap:plugin name="org.apache.cordova.device-orientation" />
 	<name>Chistiya Prints</name>
 	<description></description>
-	
+	<icon src="images/contacts-back.png" />
 	<author href="http://xieeinfotech.com" email="merajgmemon@gmail.com">Meraj Ghaniwala</author>
 	<origin access="*" />
 </widget>
